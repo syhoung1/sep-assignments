@@ -1,0 +1,40 @@
+1.  If we're searching for people in a family tree, an algorithm that runs on
+    O(1) time would be like searching for your dad, who needs at most 2 
+    iterations to find. An algorithm that runs on O(2^n) time would be 
+    comparable to searching for a great great ancestor, with every generation 
+    there are twice as many people as the previous generation to search through.
+
+2.  Best case scenario for binary search occurs when the middle value of the
+    array you're searching through happens to be the target value. In this case
+    it will only take one comparison before you've found your target.
+
+3.  Worst case for binary search occurs when the target value is at one of the
+    ends of the array. This is when the algorithm would have to do the maximum
+    number of divisions of the subarray.
+
+4.  Average case for binary search is bounded between the previous two cases.
+    Any binary search will make at least one comparison and at most the log of
+    however many items there are in the array.
+
+5.  graph
+
+6.  The limit as n approaches infinity of the given values is infinity.
+
+7.  The values seem to double, or nearly double, every time n increases by 1. 
+    Since this is the case, the algorithm will run on O(2^n) time. 
+
+8.  while x < array.length do
+      if x * slope == search value
+        return x *= slope
+      else
+        x += 1
+      end
+    end
+
+9.  graph
+
+10. Big-O of binary search is O(logn)
+
+11. Big-Omega of binary search is O(1)
+
+12. Big-theta of binary search is O(logn)
