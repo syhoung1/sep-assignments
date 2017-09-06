@@ -1,0 +1,47 @@
+1.  The big-O of the goodbye_world functions is O(1). This function only has one
+    operation and will always take the same amount of time to process, all other
+    factors being equal.
+
+2.  This function will run in linear time. It has a big-O of O(n). This function
+    first sets the largest = collection[0] which will take constant time to
+    process. Then it iterates through the entire array and compares each element
+    to the "largest" variable, updating the value when necessary. 
+    The worst case occurs if the array has elements sorted in ascending order.
+    When this is the case, the function will do two operations per value in the
+    array. The complexity of this specific example then is O(2n + 1), which we
+    can simplify to O(n).
+
+3.  Finding the largest in a 2D array will take O(n ^ 2) time. The example
+    function sets largest = collection[0][0] for the collection that it takes in
+    as an argument, and this will take constant time. Then it sets the subarray
+    subcollection = collection[i] for a total of n opeartions. After the
+    subcollection array is set, the function will then iterate through each of
+    the values in the arrray and do a comparison against the "largest" variable
+    for a total of n operations.
+    In the worst case, all values are in ascending order and each array holds
+    values strictly greater than the array in the previous index, then the
+    function will again make n assigments to the "largest" variable. Since the
+    function has to go through n arrays, and do at most 2n operations for each
+    subarray, the complexity of this function is O(2n ^ 2 + 1), or O(n ^ 2).
+
+4.  The numbers_recursive function will do 2 constant time checks each time it
+    is called. Then, each number will have 2 recursive calls for 
+    n - 1 and n - 2. At each level of the recursion, the number of recursive
+    calls will double. So if we increment n by one, the number of operations
+    double, making the big-O of this function O(n ^ 2).
+
+5.  This function assigns two variables; num1 and num2 at constant time. It then
+    iterates through each integer leading up to n - 1 and does 4 operations for
+    4n - 4 operations. Finally, the function returns num2. This function will
+    do 4n - 2 operations each time it's called, so it runs on O(n) time.
+
+6.  This sorting function's worst case occurs when we have to sort the entire
+    array, by default or per instruction. The array in the worst case would also
+    be in descending order. The function first compares n values in the array in
+    the while min < max block, and the pointer for the free slot moves closer to
+    the middle. At the end of the block, the free pointer is in the middle and
+    then the function makes two recursive calls, one on the array to the left
+    of the pointer and one on the array to the right. On each level of
+    recursion, half the amount of work is needed to be done since the subarrays
+    are halves of the previous array. This means that this function is running
+    on O(nlogn) time.
