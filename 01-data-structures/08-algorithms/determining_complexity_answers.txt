@@ -45,3 +45,4 @@
     recursion, half the amount of work is needed to be done since the subarrays
     are halves of the previous array. This means that this function is running
     on O(nlogn) time.
+    

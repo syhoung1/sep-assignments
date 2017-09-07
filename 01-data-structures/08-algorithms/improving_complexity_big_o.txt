@@ -1,0 +1,23 @@
+1.  The first algorithm, with code optimizations, will perform roughly the same
+    as its previous version. For the n array it's given, the function will
+    append the array to a combined_array for a total of n operations. It stores
+    a variable sorted_array at constant time. Finally it loops through all of
+    the values in the combined_array and decides where to put the value inside
+    of the sorted_array. In order to find where to place the value, the function
+    does another loop within the sorted_array to see where to insert the value.
+    In the worst case, all of the values will require looping through the entire
+    sorted_array in order to find the appropriate slot to put it in. This will
+    require roughly 1/2 * n ^ 2 operations. Thus, this algorithm will run at
+    O(n ^ 2) time.
+
+2.  The second algorithm combines the n given arrays into a combined_array for a
+    total of n operations. Then, the algorithm does a quick sort of the
+    combined_array. The time complexity of this algorithm is n + n ^ 2 in the
+    worst case, so the big-O of this algorithm is O(n ^ 2).
+    
+3.  The last algorithm combines the n given arrays into the combined_array for a
+    total of n operations. It then uses insertion sort to sort the combined-
+    array into ascending order. At its worst the insertion sort will perform
+    at O(n ^ 2) time. Thus the algorithm itself will run at O(n ^ 2) time.
+    However, the space complexity of this algorithm is O(1) since insertion sort
+    sorts all of the values in place.
