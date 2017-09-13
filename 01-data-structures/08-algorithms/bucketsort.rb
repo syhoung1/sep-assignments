@@ -1,3 +1,4 @@
+
 class MyQueue
   attr_accessor :head
   attr_accessor :tail
@@ -26,3 +27,21 @@ class MyQueue
     return @queue.length === 0
   end
 end
+
+def bucket_sort(arr, n)
+  queues = []
+  
+  while arr.length > 0
+    temp = arr.shift
+    if queues[temp].nil?
+     queues[temp] = MyQueue.new
+    end
+    queues[temp].enqueue(temp)
+  end
+  
+  queues.each do |queue|
+    while !queue.empty?
+      arr.push(queue.dequeue)
+    end
+  end
+end 

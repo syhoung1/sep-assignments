@@ -1,0 +1,9 @@
+The heap sort has to heapify the data first before it is able to sort, so
+its performance suffers because of that.
+
+Bucket sort is faster than heap sort and is very fast if the range of the
+buckets is very small, since there won't be any additional sorting left to do
+in each bucket.
+
+Quick sort is the fastest out of these three because each time it sorts through
+a subarray, the amount of work it has to do is decreased by 1/2.
