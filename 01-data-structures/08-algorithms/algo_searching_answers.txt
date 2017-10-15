@@ -1,0 +1,22 @@
+1. To find "g" in the alphabetically sorted list, it would take 7 iterations.
+   There are 7 items in the list, and since "g" is the last item, we would find
+   it on the 7th iteration.
+
+2. To find "g" using the binary search, it would take 3 iterations. We check the
+   list that's half the length of the list before it. Since "g" is the last item
+   we would arrive at "g" on the third iteration, since it would be the only
+   item left on the list to check.
+
+3. 34, 55, 89. It takes much longer for the recursive fib to run because the
+   amount of work doubles each time the number of iterations we want increases
+   by 1.
+
+1. For an unsorted list of a million items, we would use the binary search.
+   We could use either iterative or recursive implementations since at each
+   level of recursion or iteration we're only doing half the amount of work as
+   the previous level. We would use the binary search since it would take a max 
+   of log2(1 million) iterations, as opposed to 1 million iterations with the
+   linear search.
+
+2. For a sorted list, we would do the same thing since the worst case for binary
+   search is much more favorable than the worst case for the linear search.
