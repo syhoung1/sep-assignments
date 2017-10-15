@@ -1,0 +1,36 @@
+1. paying in exact change
+    
+    def pay_exact(price)
+        SET denominations = [100, 50, 20, 10, 5, 1, .25, .10, .05, .01]
+
+        SET payment = 0
+        SET biggest_denomination_index = 0
+        Do while price > payment
+            if denominations[biggest_denomination_index] <= price
+                COMPUTE payment += denominations[biggest_denomination_index]
+            else
+                biggest_denomination_index += 1
+            end
+        end
+    end
+
+2. eating
+    
+    def eat_til_full
+        SET full_percentage = 0
+        while full_percentage < 100
+            full_percentage += fridge.first_item
+        end
+    end
+
+3. running on a treadmill
+    
+    def run
+        SET calories_burned = 0
+
+        treadmill_on = true
+        while calories_burned < 100
+            run
+        end
+        treadmill_on = false
+    end
